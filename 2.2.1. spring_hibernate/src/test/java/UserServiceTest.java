@@ -2,18 +2,14 @@ import hiber.config.AppConfig;
 import hiber.model.Car;
 import hiber.model.User;
 import hiber.service.UserService;
-import hiber.service.UserServiceImp;
 import org.junit.Assert;
 import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import java.util.List;
-
 public class UserServiceTest {
-    AnnotationConfigApplicationContext context =
+    private final AnnotationConfigApplicationContext context =
             new AnnotationConfigApplicationContext(AppConfig.class);
-
-    UserService userService = context.getBean(UserService.class);
+    private final UserService userService = context.getBean(UserService.class);
 
     private Car car1 = new Car("BMW", 200);
     private String firstName = "Vasya";
